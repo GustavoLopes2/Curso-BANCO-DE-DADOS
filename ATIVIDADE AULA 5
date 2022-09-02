@@ -1,0 +1,16 @@
+-- Escreva o comando para inserir 3 registros da tabela estado com todas as colunas. 
+INSERT INTO estado VALUES (NULL,'PARANA','PR','S','2022-08-11'), (NULL,'SAO PAULO','PR','S','2022-08-11'), (NULL,'MATO GROSSO','MT','S','2022-08-11'); 
+
+-- Escreva o comando para inserir 2 registros da tabela estado, definindo todos os dados, exceto a chave  primária que é auto incremento. 
+INSERT INTO estado (nome,sigla,ativo,data_cadastro) VALUES ('PARANA','PR','S','2022-08-11'),('SAO PAULO','SP','S','2022-08-11');
+
+-- Escreva o comando para inserir 2 registros da tabela estado, definindo somente os dados necessários. 
+INSERT INTO estado (nome,sigla) VALUES ('PARANA','PR'),('SAO PAULO','SP');  
+
+-- Escreva o comando para inserir registros da tabela cidade das 3 formas apresentadas nos exercícios  anteriores. 
+INSERT INTO cidade VALUES (NULL,'PARANAVAI','S','2022-08-11',1), (NULL,'CAMPINAS','S','2022-08-11',2), (NULL,'SUMARE','S','2022-08-11',2);
+INSERT INTO cidade (nome,ativo,data_cadastro,estado_id) VALUES ('PARANAVAI','S','2022-08-11',1),('CAMPINAS','S','2022-08-11',2);
+INSERT INTO cidade (nome,estado_id) VALUES ('PARANAVAI',1),('CAMPINAS',2);  
+
+-- Faça a inserção de 2 registros de cliente.
+INSERT INTO cliente (nome,cpf) VALUES ('GUSTAVO', '412.314.412.30'),('PEDRO', '123.542.871.31')
