@@ -1,0 +1,19 @@
+-- Escreva o comando para alterar o valor de uma coluna de um único registro de uma tabela utilizando como filtro, o Primary Key.
+UPDATE estado SET nome = 'SÃO PAULO' WHERE id = 2;
+
+-- Refaça o exercício anterior alterando os dados de mais que uma coluna de um único registro sem utilizar como filtro a chave primária. A escolha da coluna do filtro é muito importante – TOME CUIDADO.
+UPDATE estado SET nome = 'SÃO PAULO' WHERE estado.nome = 'SAO PAULO';
+
+-- Altere o valor de uma coluna de todos os registros.
+UPDATE cidade SET
+nome = 'PARANAVAÍ'
+, estado_id = 24
+, ativo = 'N'
+, data_cadastro = '2022-03-11'
+WHERE id = 97;
+
+-- Exclua um único registro de uma tabela sem utilizar como filtro, a chave primária.
+DELETE FROM estado WHERE nome = 'SÃO PAULO';
+
+-- Escreva todos os comandos necessários para excluir o cliente com o id “38”.
+DELETE FROM cliente WHERE id = 38;
