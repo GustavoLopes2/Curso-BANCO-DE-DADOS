@@ -1,0 +1,31 @@
+-- Liste o id e o nome de todas as cidades e as respectivas siglas do estado.
+SELECT 	
+	cidade.id 'ID CIDADE',
+    cidade.nome 'NOME CIDADE',
+    estado.sigla 'SIGLA ESTADO'
+FROM estado, cidade
+WHERE cidade.estado_id = estado.id;
+
+-- Liste o id e o nome de todas as cidades e as respectivas siglas do estado de São Paulo.
+SELECT 	
+	cidade.id 'ID CIDADE'
+    ,cidade.nome 'NOME CIDADE'
+    ,estado.sigla 'SIGLA ESTADO'
+FROM estado, cidade
+WHERE cidade.estado_id = estado.id
+	AND estado.nome = 'SÃO PAULO';
+    
+-- Escreva a consulta que liste o nome dos Funcionários do estado Paraná.
+SELECT 	
+    funcionario.nome 'NOME FUNCIONARIO'
+FROM estado, funcionario
+WHERE funcionario.estado_id = estado.id
+	AND estado.nome = 'PARANÁ';
+    
+-- Escreva a consulta que liste o nome e o telefone dos Fornecedores da cidade de São Paulo.
+SELECT 	
+    fornecedor.nome 'NOME FORNECEDOR',
+    fornecedor.telefone 'TELEFONE FORNECEDOR'
+FROM estado, fornecedor
+WHERE fornecedor.estado_id = estado.id
+	AND estado.nome = 'SÃO PAULO';
